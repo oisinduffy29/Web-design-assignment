@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<lang= eng>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Wexford House and Golf Club" content="width=device-width, initial-scale=1.0">
+    <title>Wexford House and Golf Club </title>
+
+
+<link rel="stylesheet" href="stylesheet.css">
+<head>
+<body>
+<a href="New.html"> Next Page</a>
+    <header>
+        <h1>Golf Course layout and prices</h1>
+        <p>While enjoying your stay in the hotel feel free to explore the scenic 18 hole course which is suitable for both beginners and experienced players.</p>
+    </header>
+
+        <h2>About the Golf Course</h2>
+        <p>Our 18-hole golf course offers guests an outside activity for players of all skill levels, whether its playing a full round of 18 holes or just practicing at the driving range there is something on offer for a variety of ages.</p>
+        
+    <section id="layout">
+        <h2>Course Layout</h2>
+        <p>Explore the layout of our beautifully designed golf course, featuring strategically placed hazards, lush fairways, and perfectly maintained greens. Spanning over 3 acres the course features both the options for 9 and 18 hole games with a 9 hole pitch and put as well.</p>
+        <ul>
+            <li>18 holes across 7,200 yards</li>
+            <li>Par 72 course</li>
+            <li>Signature 7th hole with island green</li>
+            <li>Challenging sand bunkers and water features</li>
+        </ul>
+    </section>
+
+</div>
+<!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="https://golfscape.com/blog/wp-content/uploads/2019/03/adare-manor-limerick-ireland.jpg" alt="golfscape.com" style="max-width:100%;height:auto;">
+        </div>
+        <div class="slides">
+            <img src="https://golfscape.com/blog/wp-content/uploads/2019/03/mount-juliet-east-ireland.jpg" style="max-width:100%;height:auto;">
+        </div>
+        <div class="slides">
+            <img src="https://golfscape.com/blog/wp-content/uploads/2019/03/portmarnock-dublin-ireland.jpg"  style="max-width:100%;height:auto;">
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <!-- Dots for Slide Navigation -->
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript for Slideshow
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slides');
+        const dots = document.querySelectorAll('.dot');
+
+        // Initialize Slideshow
+        function showSlide(index) {
+            if (index >= slides.length) slideIndex = 0;
+            if (index < 0) slideIndex = slides.length - 1;
+
+            slides.forEach((slide, i) => {
+                slide.style.display = i === slideIndex ? 'block' : 'none';
+            });
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === slideIndex);
+            });
+        }
+
+        // Change Slide (Next/Previous)
+        function changeSlide(step) {
+            slideIndex += step;
+            showSlide(slideIndex);
+        }
+
+        // Set Current Slide
+        function currentSlide(index) {
+            slideIndex = index - 1;
+            showSlide(slideIndex);
+        }
+
+        // Auto-play slides
+        function autoPlay() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+        // Initialize the slideshow
+        showSlide(slideIndex);
+        setInterval(autoPlay, 5000); // Change slide every 5 seconds
+    </script>
+
+        <h2>Course Highlights</h2>
+        <div class="hole">
+            <h3>Hole 1 - Difficult Par 4</h3>
+            <p>A scenic opening hole with a dogleg right and water along the left side. Requires accuracy off the tee to avoid the water hazard.</p>
+        </div>
+        <div class="hole">
+            <h3>Hole 7 - Signature Hole - Par 3</h3>
+            <p>Our signature hole with an island green. Precision is key for this short but challenging hole.</p>
+        </div>
+        <div class="hole">
+            <h3>Hole 18 - Par 5</h3>
+            <p>A long finishing hole with a wide fairway and strategically placed bunkers. Great for a dramatic finish.</p>
+        </div>
+  
+
+
+    
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing Options</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Price</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Single Round</td>
+                    <td>€100</td>
+                    <td>Includes 18 holes, golf cart, and access to practice facilities.</td>
+                </tr>
+                <tr>
+                    <td>Weekend Package</td>
+                    <td>€250</td>
+                    <td>Two rounds, golf cart, and complimentary lunch.</td>
+                </tr>
+                <tr>
+                    <td>Hotel & Golf Stay</td>
+                    <td>€500</td>
+                    <td>One night in the hotel, two rounds of golf, golf cart, and breakfast.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Wexford House and Golf Club | Call us at (089 777 5665)| Visit us at our hotel grounds</p>
+    </footer>
+
+</body>
+
+</html>

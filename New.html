@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Hotel and Golf Course - County Wexford</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #2C3E50;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+        }
+        nav {
+            background: #1ABC9C;
+            text-align: center;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #2C3E50;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #1ABC9C;
+            margin-bottom: 1rem;
+        }
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .features ul {
+            list-style-type: square;
+            padding-left: 1.5rem;
+        }
+        .features li {
+            margin-bottom: 0.5rem;
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background: #2C3E50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<a href="index.html"> Previous Page</a>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Additional features and facilities included in guest packages</h1>
+       
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#hotel-features">Hotel Features</a>
+        <a href="#golf-course">Spa services</a>
+        <a href="#local-attractions">Local Attractions</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hotel Features Section -->
+        <div id="hotel-features" class="section features">
+            <h2>Features include:</h2>
+           
+            <ul>
+                
+                <li>Heated Indoor Swimming Pool</li>
+                <li>Fine Dining Restaurant featuring Irish Cuisine</li>
+                <li>Scenic Outdoor Terraces with Countryside Views</li>
+                <li>State-of-the-Art Fitness Centre</li>
+                <li>Conference and Wedding bookings available Facilities</li>
+                <li>Complimentary High-Speed Wi-Fi</li>
+            </ul>
+        </div>
+<!-- Services Section -->
+        <section id="services" class="section">
+          
+<h2>Spa Services</h2>
+            <ul>
+                <li><strong>Full Body Massage:</strong> 60 or 90-minute sessions to ease tension.</li>
+                <li><strong>Facial Treatments:</strong> Rejuvenating facials for glowing skin.</li>
+                <li><strong>Aromatherapy:</strong> Essential oils to calm your mind and body.</li>
+                <li><strong>Body Scrubs:</strong> Exfoliation treatments for silky-smooth skin.</li>
+            </ul>
+            <p>Relaxation music accompanies all of the treatments that the spa has.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wdturEfdkUs?si=AuOLp02yEcLTqdWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<form action="/action_page.php">
+</video>
+  <p>Some services and treatments may be subject to extra payments if not included in the guest package purchased. Enter your contact details below to enquire about availability for the spa services due to hotel guests being prioritised.</p>
+
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+ <label for="email">Email OR Phone Number:</label><br>
+ <input type="text" id="fname" name="fname" value=""><br>
+   <input type="submit" value="Submit">
+</form>
+        </section>
+
+            </div>
+        </div>
+
+        <!-- Local Attractions Section -->
+        <div id="local-attractions" class="section">
+            <h2>Explore County Wexford</h2>
+            <p>Located near scenic coastal towns and historic landmarks, our hotel offers convenient access to some of Wexford's finest attractions:</p>
+            <ul>
+                <li>Johnstown Castle & Gardens</li>
+                <li>Wexford Wildfowl Reserve</li>
+                <li>Hook Lighthouse – the world's oldest operational lighthouse</li>
+                <li>Curracloe Beach – a pristine coastal escape</li>
+                <li>Local towns offering charming Irish pubs and shops</li>
+            </ul>
+<h2>Geolocation to see how far you are from Wexford</h2>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script> 
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+         <p>&copy; 2023 Wexford House and Golf Club| Call us at (089 777 5665)|</p> 
+
+    </footer>
+</body>
+</html>
